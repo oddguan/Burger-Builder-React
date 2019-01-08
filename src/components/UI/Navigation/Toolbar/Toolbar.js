@@ -7,7 +7,10 @@ import NavigationItems from '../NavigationItems/NavigationItems';
 const toolbar = props => {
   return (
     <header className={classes.Toolbar}>
-      <button className={classes.MobileOnly} onClick={props.opened}>Menu</button>
+      <button 
+        className={[classes.MobileOnly, classes.MenuButton].join(' ')} 
+        onClick={props.opened}>
+        Menu</button>
       <div className={classes.Logo}><Logo /></div>
       <nav className={classes.DesktopOnly}>
         <NavigationItems />
